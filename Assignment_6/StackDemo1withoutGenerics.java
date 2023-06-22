@@ -52,7 +52,7 @@ public class StackDemo1withoutGenerics
     }
     public static void main(String[] args) 
     {
-        Scanner sc = new Scanner(System.in);
+        Scanner obj = new Scanner(System.in);
         int stack[] = new int[MAX];
         int top = -1;
         while (true) 
@@ -63,7 +63,7 @@ public class StackDemo1withoutGenerics
             System.out.println("2: Pop");
             System.out.println("3: Display");
             System.out.print("Enter your choice:");
-            int choice = sc.nextInt();
+            int choice = obj.nextInt();
             switch (choice) 
             {
                 case 0:

@@ -47,9 +47,9 @@ public class StackDemo2withoutGenerics
     }
     public static Node push(Node top)
     {
-        Scanner in = new Scanner(System.in);
+        Scanner obj = new Scanner(System.in);
         System.out.print("Enter the element to Push :");
-        Node newNode = new Node(in.nextInt());
+        Node newNode = new Node(obj.nextInt());
         newNode.next=top;
         top=newNode;
         return top;
