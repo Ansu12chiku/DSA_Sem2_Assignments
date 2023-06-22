@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class StackDemo1
 {
     public static int push(Object[] S, int top) 
@@ -6,33 +6,10 @@ public class StackDemo1
         if (isFull(top))
             System.out.println("Stack is already full...Can't push anymore");
         else 
-        { 
-            System.out.println("Enter the type of element to push:");
-            System.out.println("1. Integer");
-            System.out.println("2. Character");
-            System.out.println("3. String");
-            int type = obj.nextInt();
-            switch (type) 
-            {
-                case 1:
-                    System.out.print("Enter an integer: ");
-                    int intelement = obj.nextInt();
-                    S[++top] =intelement;
-                    break;
-                case 2:
-                    System.out.print("Enter a character: ");
-                    char charelement = obj.next().charAt(0);
-                    S[++top] =charelement;
-                    break;
-                case 3:
-                    System.out.print("Enter a string: ");
-                    String stringElement = obj.next();
-                    S[++top] = stringElement;
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-                    break;
-            }
+        {
+            System.out.print("Enter the element : ");
+            Object element = (Object) obj.next();
+            S[++top]=element;
         }
         return top;
     }

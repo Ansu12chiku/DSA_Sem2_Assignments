@@ -14,36 +14,11 @@ public class StackDemo2
     }
     public static <T> Node<T> push(Node<T> top) 
     {        
-        System.out.println("Enter the type of element to push:");
-        System.out.println("1. Integer");
-        System.out.println("2. Character");
-        System.out.println("3. String");
-        int type = obj.nextInt();
         System.out.println("Enter the value:");
-        switch(type)
-        {
-        case 1:
-            int intValue = obj.nextInt();
-            Node intNode = new Node<>(intValue);
-            intNode.next = top;
-            top = intNode;
-            break;
-        case 2:
-            char charValue = obj.next().charAt(0);
-            Node charNode  = new Node<>(charValue);
-            charNode.next = top;
-            top = charNode;
-            break;
-        case 3:
-            String stringValue = obj.next();
-            Node stringNode = new Node<>(stringValue);
-            stringNode.next = top;
-            top = stringNode;
-            break;
-        default:
-            System.out.println("Invalid choice. Please try again.");
-            break;
-        }
+        T element = (T) obj.next();
+        Node newNode=new Node<T>(element);
+        newNode.next=top;
+        top=newNode;
         return top;
     }
     public static <T> Node<T> pop(Node<T> top) 
@@ -68,7 +43,7 @@ public class StackDemo2
             int i=1;
             while (current != null) 
             {
-                System.out.println(i+" ->"+current.info);
+                System.out.println(i++ +" ->"+current.info);
                 current = current.next;
             }
             System.out.println();
