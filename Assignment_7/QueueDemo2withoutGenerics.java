@@ -1,4 +1,3 @@
-package Assignment_7;
 import java.util.*;
 class Node
 {
@@ -9,29 +8,28 @@ class Node
 		this.info=info;
 		this.next=null;
 	}
-
 }
-public class QueueDemo2withoutGenerics  
+public class QueueDemo2withoutGenerics 
 {
 	public static Node insert(Node rear, Node front)
 	{
 		Scanner obj = new Scanner(System.in);
 		System.out.print("Enter the value to insert in Queue : ");
-        int element=obj.nextInt();
-		Node n = new Node(element);
+        int element= obj.nextInt();
+		Node newnode = new Node(element);
 		if(rear==null || front==null)
         {
-			front =n;
-            rear= n;
+			front =newnode;
+            rear= newnode;
         }
 		else
 		{
-			rear.next=n;
-			rear=n;
+			rear.next=newnode;
+			rear=newnode;
 		}
 		return front;        
 	}
-	public static  Node delete(Node rear, Node front)
+	public static Node delete(Node rear, Node front)
 	{
 		if(front==null)
 			System.out.println("Empty Queue,Nothing to Delete...");

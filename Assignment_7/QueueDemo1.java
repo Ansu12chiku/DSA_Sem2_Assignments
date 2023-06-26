@@ -1,4 +1,4 @@
-package Assignment_7;
+
 import java.util.*;
 public class QueueDemo1<T> 
 {
